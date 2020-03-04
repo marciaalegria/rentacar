@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
+import Logo from './assets/components/Logo';
 import './App.css';
+import Auth from './Auth';
+
+import {useUser} from 'reactfire';
+import img2 from './assets/img/img2.png';
+
+      
+
 
 function App() {
+  const user = useUser();
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <Logo/>
+       {user&&<p>Usuario:{user.email} </p>
+    }
+     <Auth/>
+
     </div>
   );
 }
+
+
 
 export default App;
