@@ -4,6 +4,7 @@ import Logo from './assets/components/Logo';
 import Auth from './Auth';
 
 import {useUser} from 'reactfire';
+import Available from './assets/components/Available';
 
 
       
@@ -12,10 +13,12 @@ function App() {
 
   return (
     <div className="App">
-       <Logo/>
-       {user&&<p>Usuario:{user.email} </p>
+       
+       {user&&<p>Hola: {user.email} </p>
     }
-     <Auth/>
+      <Logo/>
+      <Auth/>
+      <Available/>
 
     </div>
   );

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+
 import 'firebase/auth';
 import {useFirebaseApp, useUser} from 'reactfire';
+import Home from './assets/views/home';
 
 export default (props) => {
     const [email, setEmail]= useState('');
@@ -15,10 +17,12 @@ export default (props) => {
 
     const login = async ()=>{
         await firebase.auth().signInWithEmailAndPassword(email,password);
+        return(<Home/>);
     }
 
     const logout = async ()=>{
         await firebase.auth().signOut();
+
     }
     return (
         <div>

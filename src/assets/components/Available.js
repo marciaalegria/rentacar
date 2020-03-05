@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import cars from '../data/cars.json';
 import Logo from './Logo';
 
