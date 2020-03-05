@@ -7,11 +7,14 @@ class Home extends Component{
     
     render(){
     return(
-        <div>
-        <Available/>
+        <div className="Logo">
+            <Logo/>
         </div>
-        <div>
-        <Delete/>
+        <div className="Container">
+            <Available/>
+        </div>
+        <div className="Container">
+            <Delete/>
         </div>
         )
 
