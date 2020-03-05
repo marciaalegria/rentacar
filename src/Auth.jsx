@@ -22,7 +22,7 @@ export default (props) => {
     }
     return (
         <div>
-            { {user, email}}
+            { user&& email}
             {
                 !user &&
             <div>
